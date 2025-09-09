@@ -1,70 +1,151 @@
-{
-  "contributors": [
-    {
-      "name": "喵凹条",
-      "url": "https://www.instagram.com/houjustin732?igsh=MWdwdmN4d2I0Zm80bw==",
-      "avatar": "https://s2.loli.net/2025/08/31/JhG9oXzYBZrkRa4.png",
-      "contributions": ["design"]
-    },
-    {
-      "name": "CarnonLee",
-      "url": "",
-      "avatar": "👨‍💻",
-      "contributions": ["code"]
-    },
-    {
-      "name": "jiangyin14",
-      "url": "https://github.com/jiangyin14",
-      "avatar": "👨‍💻",
-      "contributions": ["code"]
-    },
-    {
-      "name": "逗趣狂想",
-      "url": "https://space.bilibili.com/3493127828540221",
-      "avatar": "🔧",
-      "contributions": ["infra"]
-    },
-    {
-      "name": "Nzcorz",
-      "url": "",
-      "avatar": "👩‍💻",
-      "contributions": ["code"]
-    },
-    {
-      "name": "桜子ちゃん",
-      "url": "",
-      "avatar": "👩‍💻",
-      "contributions": ["code"]
-    },
-    {
-      "name": "ZeroSnow",
-      "url": "https://github.com/chencomcdyun",
-      "avatar": "🎨",
-      "contributions": ["design"]
-    },
-    {
-      "name": "猫白GAF",
-      "url": "https://space.bilibili.com/508878020",
-      "avatar": "https://s2.loli.net/2025/08/31/KLGzDOtQ3A9qFxE.jpg",
-      "contributions": ["design"]
-    },
-    {
-      "name": "小希Lusiey_",
-      "url": "",
-      "avatar": "👩‍💻",
-      "contributions": ["test"]
-    },
-    {
-      "name": "骑老奶奶过马路",
-      "url": "",
-      "avatar": "👩‍💻",
-      "contributions": ["test"]
-    },
-    {
-      "name": "laiTM",
-      "url": "",
-      "avatar": "👩‍💻",
-      "contributions": ["test"]
-    }
-  ]
-}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>致谢 | Swift Craft Launcher 贡献者</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-orange': '#FF7A00',
+                        'neon-pink': '#FF2E93',
+                        'neon-purple': '#B15FFF',
+                        'neon-blue': '#00B4FF',
+                        // 更深的背景色（原#0A0A0F调整为#050508，#12121A调整为#0D0D12）
+                        'grid-dark': '#050508',
+                        'grid-lighter': '#0D0D12',
+                    },
+                    fontFamily: {
+                        'sans': ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    },
+                    animation: {
+                        'neon-pulse': 'neonPulse 3s ease infinite alternate',
+                    },
+                    keyframes: {
+                        neonPulse: {
+                            '0%': { boxShadow: '0 0 10px rgba(255, 122, 0, 0.5), 0 0 20px rgba(255, 46, 147, 0.3)' },
+                            '50%': { boxShadow: '0 0 15px rgba(177, 95, 255, 0.5), 0 0 25px rgba(0, 180, 255, 0.3)' },
+                            '100%': { boxShadow: '0 0 10px rgba(255, 122, 0, 0.5), 0 0 20px rgba(255, 46, 147, 0.3)' },
+                        }
+                    }
+                },
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .frosted {
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border: 1px solid rgba(255, 255, 255, 0.05);
+            }
+            .grid-pattern {
+                background-image: 
+                    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), /* 略微降低网格可见度以匹配更深背景 */
+                    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+                background-size: 20px 20px;
+            }
+            .neon-border {
+                position: relative;
+                border-radius: 2rem;
+                overflow: hidden;
+            }
+            .neon-border::before {
+                content: '';
+                position: absolute;
+                inset: -2px;
+                border-radius: 2.1rem;
+                background: linear-gradient(45deg, 
+                    theme('colors.neon-orange'), 
+                    theme('colors.neon-pink'), 
+                    theme('colors.neon-purple'), 
+                    theme('colors.neon-blue'),
+                    theme('colors.neon-orange')
+                );
+                background-size: 200%;
+                animation: neonGlow 5s linear infinite;
+                z-index: -1;
+            }
+            @keyframes neonGlow {
+                0% { background-position: 0% 50%; }
+                100% { background-position: 200% 50%; }
+            }
+        }
+    </style>
+</head>
+<body class="bg-grid-dark text-white min-h-screen font-sans grid-pattern">
+    <!-- 主容器：霓虹边框+毛玻璃效果 -->
+    <div class="neon-border frosted bg-grid-lighter/60 max-w-7xl mx-auto mt-6 md:mt-10 mb-8 md:mb-16 p-5 md:p-8 animate-neon-pulse">
+        <h1 class="text-2xl md:text-4xl font-bold mb-6 md:mb-10 flex flex-col md:flex-row items-center">
+            <span class="mb-2 md:mb-0 md:mr-3">致谢</span>
+            <span class="text-gray-300 text-lg md:text-xl">Swift Craft Launcher 贡献者</span>
+        </h1>
+
+        <!-- 分栏分类布局（响应式） -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
+            <!-- 软件开发 -->
+            <div class="bg-grid-dark/60 rounded-xl p-4 hover:bg-grid-dark/80 transition-colors">
+                <h2 class="text-neon-orange text-lg md:text-xl font-semibold mb-3">软件开发</h2>
+                <ul class="space-y-2 text-gray-200 text-sm md:text-base">
+                    <li>不太正经的王同学</li>
+                    <li>屁蛋八宝稀饭</li>
+                    <li>Nzcorz</li>
+                    <li>猫羽桜子</li>
+                    <li>ImReak</li>
+                    <li>Arispex</li>
+                    <li>Fck</li>
+                </ul>
+            </div>
+
+            <!-- 网页制作 -->
+            <div class="bg-grid-dark/60 rounded-xl p-4 hover:bg-grid-dark/80 transition-colors">
+                <h2 class="text-neon-pink text-lg md:text-xl font-semibold mb-3">网页制作</h2>
+                <ul class="space-y-2 text-gray-200 text-sm md:text-base">
+                    <li>CarnonLee</li>
+                    <li>小希Lusiey_</li>
+                    <li>CodeCrafter-TL</li>
+                </ul>
+            </div>
+
+            <!-- 美术 -->
+            <div class="bg-grid-dark/60 rounded-xl p-4 hover:bg-grid-dark/80 transition-colors">
+                <h2 class="text-neon-purple text-lg md:text-xl font-semibold mb-3">美术</h2>
+                <ul class="space-y-2 text-gray-200 text-sm md:text-base">
+                    <li>喵凹条</li>
+                    <li>ZeroSnow</li>
+                    <li>猫白GAF</li>
+                </ul>
+            </div>
+
+            <!-- 宣传 -->
+            <div class="bg-grid-dark/60 rounded-xl p-4 hover:bg-grid-dark/80 transition-colors">
+                <h2 class="text-purple-400 text-lg md:text-xl font-semibold mb-3">宣传</h2>
+                <ul class="space-y-2 text-gray-200 text-sm md:text-base">
+                    <li>逗趣狂想</li>
+                    <li>依潮水</li>
+                </ul>
+            </div>
+
+            <!-- 测试 -->
+            <div class="bg-grid-dark/60 rounded-xl p-4 hover:bg-grid-dark/80 transition-colors">
+                <h2 class="text-neon-blue text-lg md:text-xl font-semibold mb-3">测试</h2>
+                <ul class="space-y-2 text-gray-200 text-sm md:text-base">
+                    <li>是千逸啊</li>
+                    <li>LiaoRan</li>
+                    <li>laiTM</li>
+                    <li>骑老奶奶过马路</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="text-center text-gray-400 text-sm mb-6">
+        <p>用 <i class="fa fa-heart text-red-500"></i> 打造的致谢页面 | © 2025 Swift Craft</p>
+    </footer>
+</body>
+</html>
